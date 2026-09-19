@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XX VRA - XX VROC Italy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #151412;
+    --panel: #1D1B18;
+    --line: #38352F;
+    --ink: #EDE7DC;
+    --ink-dim: #9C9488;
+    --amber: #E8871E;
+  }
+  * { box-sizing: border-box; }
+  html{ font-size: 19px; }
+  body{
+    margin: 0;
+    background:
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px),
+      var(--bg);
+    color: var(--ink);
+    font-family: 'Barlow Condensed', sans-serif;
+    min-height: 100vh;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+  header{
+    max-width: 780px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2rem;
+  }
+  header h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 4.6rem);
+    letter-spacing: 0.03em;
+    margin: 0 0 0.6rem;
+  }
+  header h1 span{ color: var(--amber); }
+  header p{
+    color: var(--ink-dim);
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+  .grid{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.6rem;
+  }
+  @media (max-width: 640px){
+    .grid{ grid-template-columns: 1fr; }
+  }
+  .card{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--panel);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover, .card:focus-visible{
+    border-color: var(--amber);
+    transform: translateY(-3px);
+  }
+  .card:focus-visible{
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+  }
+  .thumb{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #2A2622;
+  }
+  .thumb::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.05) 55%);
+  }
+  .label{
+    position: absolute;
+    left: 1rem;
+    bottom: 0.8rem;
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+  }
+  .card.disabled{
+    cursor: default;
+    opacity: 0.78;
+  }
+  .card.disabled:hover,
+  .card.disabled:focus-visible{
+    border-color: var(--line);
+    transform: none;
+    outline: none;
+  }
+  .badge-soon{
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    z-index: 1;
+    background: rgba(0,0,0,0.72);
+    color: var(--amber);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.55rem;
+    border: 1px solid var(--amber);
+    border-radius: 2px;
+  }
+  footer{
+    max-width: 780px;
+    margin: 3.5rem auto 0;
+    text-align: center;
+    color: var(--ink-dim);
+    font-size: 1.15rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>XX International VRA Rally   Italy TUSCIA 2026</h1>
+  <p>Every shot tells a moment, every moment tells a story, we relive through these images the emotions, smiles, and passion that made this event unforgettable. </p>
+</header>
+
+<div class="grid">
+
+  <div class="card disabled" aria-disabled="true">
+    <div class="thumb" style="background-image: url('img/logo.jpg');">
+      <span class="label"></span>
+      <span class="badge-soon">Prossimamente</span>
+    </div>
+  </div>
+
+  <a class="card" href="https://photos.app.goo.gl/AHcwaTor4rvym2BK7" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/1.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/euBf9tQmEeLNSj716" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/2.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/4n354e3RtRVwv3Fe9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/3.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/XJxsvXuYDuBrpFTE6" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/4.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/ZrzNLrMuEJpW2nNz7" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/5.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/bbu2L2SNRpF1MaSG8" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/6.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/8BuSok6ef51qr6Mc8" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/7.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/vKeeRM3cT2x5zhwY7" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/8.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/EmfDd9hwK48ZvJM2A" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/9.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/RwoDiTUucKPocLbh9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/10.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/RsDaY3Y4JFhoiqYy8" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/11.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/jLgc9sgsNoxvopJJ9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/12.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/Sj4jRbouRpPnnNhS8" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/13.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/atdMBRn4MTJqBGwY9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/14.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/GYUvTYCR1jL2TExf9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/15.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/frcjp3A69swMpXNE9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/16.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+
+  <a class="card" href="https://photos.app.goo.gl/FuB4HnGwTJwWaNXR9" target="_blank" rel="noopener">
+    <div class="thumb" style="background-image: url('img/diapositiva17.jpg');">
+      <span class="label"></span>
+    </div>
+  </a>
+</div>
+
+<footer>
+  Photos by: Bella, Randa, Roy, and Thunder
+</footer>
+
+</body>
+</html>
