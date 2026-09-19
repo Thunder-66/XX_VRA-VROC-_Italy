@@ -150,7 +150,7 @@
   <div class="card disabled" aria-disabled="true">
     <div class="thumb" style="background-image: url('img/logo.jpg');">
       <span class="label"></span>
-      <span class="badge-soon">Prossimamente</span>
+      <span class="badge-soon" id="visitor-counter">You are visitor number...</span>.   
     </div>
   </div>
 
@@ -260,6 +260,27 @@
 <footer>
   Photos by: Bella, Randa, Roy, and Thunder
 </footer>
+
+<script>
+  (function() {
+    const siteUrl = encodeURIComponent(window.location.href);
+    const hitUrl = `https://hits.seeyoufarm.com/api/count/incr/badge.json?url=${siteUrl}&count_bg=%23E8871E&title_bg=%231D1B18&icon=&item_name=hits`;
+
+    fetch(hitUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.value) {
+          document.getElementById('visitor-counter').innerText = `You are visitor number ${data.value}`;
+        } else {
+          document.getElementById('visitor-counter').innerText = `You are visitor number 1`;
+        }
+      })
+      .catch(err => {
+        console.error('Errore contatore:', err);
+        document.getElementById('visitor-counter').innerText = `Welcome!`;
+      });
+  })();
+</script>
 
 </body>
 </html>
